@@ -8,7 +8,7 @@ function Navbar() {
       <h1 className="logo">EXL ATM</h1>
       <div className="nav-links">
         <Link to="/">Home</Link>
-        <Link to="/account">Account</Link>
+        {/* <Link to="/account">Account</Link> */}
       </div>
     </nav>
   );
