@@ -1,39 +1,86 @@
-/* Full-width Navbar */
+/* General Navbar Styles */
 .navbar {
-    width: 100%;
-    background: linear-gradient(145deg, #e6e6e6, #ffffff);
-    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.1), -5px -5px 15px rgba(255, 255, 255, 0.5);
-    display: flex;
-    justify-content: space-between;
+  background: linear-gradient(90deg, #005fa3, #0077cc); /* Gradient background */
+  padding: 10px 0;
+  position: sticky;
+  top: 0;
+  width: 100%;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
+}
+
+/* Navbar Content Container */
+.navbar-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px; /* Restrict the width for centered content */
+  margin: 0 auto;
+  padding: 0 20px;
+  box-sizing: border-box;
+}
+
+/* Logo Styles */
+.navbar-logo {
+  font-size: 24px;
+  font-weight: bold;
+  color: #ffffff;
+  cursor: pointer;
+  text-shadow: 1px 2px 4px rgba(0, 0, 0, 0.3);
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.navbar-logo:hover {
+  color: #cce7ff;
+  transform: scale(1.1);
+}
+
+/* Links Section */
+.navbar-links {
+  display: flex;
+  gap: 20px;
+}
+
+/* Button Styles */
+.navbar-button {
+  background: #ffffff;
+  color: #005fa3;
+  border: none;
+  border-radius: 25px;
+  padding: 10px 20px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.navbar-button:hover {
+  background: #e0f0ff;
+  color: #003f6e;
+  transform: translateY(-3px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+.navbar-button:active {
+  transform: translateY(1px);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .navbar-container {
+    flex-direction: column;
     align-items: center;
-    padding: 15px 50px;
-    border-radius: 0 0 20px 20px;
-    position: fixed;
-    top: 0;
-    left: 0;
-    z-index: 100;
   }
-  
-  .logo {
-    font-size: 24px;
-    font-weight: bold;
-    color: #0077cc;
+
+  .navbar-links {
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 10px;
   }
-  
-  .nav-links {
-    display: flex;
-    gap: 20px;
+
+  .navbar-button {
+    width: 100%;
+    text-align: center;
   }
-  
-  .nav-links a {
-    text-decoration: none;
-    color: #0077cc;
-    font-weight: 500;
-    transition: transform 0.2s ease, color 0.3s;
-  }
-  
-  .nav-links a:hover {
-    color: #005fa3;
-    transform: translateY(-3px);
-  }
-  
+}

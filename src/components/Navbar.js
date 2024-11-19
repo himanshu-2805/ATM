@@ -1,14 +1,18 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 import './Navbar.css';
 
 function Navbar() {
+  const navigate = useNavigate();
+
   return (
     <nav className="navbar">
-      <h1 className="logo">EXL ATM</h1>
-      <div className="nav-links">
-        <Link to="/">Home</Link>
-        {/* <Link to="/account">Account</Link> */}
+      <div className="navbar-logo" onClick={() => navigate('/')}>
+        EXL ATM
+      </div>
+      <div className="navbar-links">
+        <button className="navbar-button" onClick={() => navigate('/')}>Home</button>
+        {/* <button className="navbar-button" onClick={() => navigate('/account')}>Account</button> */}
       </div>
     </nav>
   );

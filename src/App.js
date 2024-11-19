@@ -6,12 +6,14 @@ import Withdraw from './components/Withdraw';
 import Deposit from './components/Deposit';
 import Balance from './components/Balance';
 import SuccessPage from './components/SuccessPage';
+import Navbar from './components/Navbar';
 
 function App() {
   const [user, setUser] = useState(null);
 
   return (
     <Router>
+       {/* <Navbar /> */}
       <Routes>
         <Route path="/" element={<Home setUser={setUser} />} />
         {user && (

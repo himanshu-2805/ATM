@@ -1,13 +1,21 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
+import './Account.css';
 
 function Account() {
+  const navigate = useNavigate();
+
   return (
-    <div className="account">
-      <h2>Account Dashboard</h2>
-      <Link to="/withdraw">Withdraw</Link>
-      <Link to="/deposit">Deposit</Link>
-      <Link to="/balance">Check Balance</Link>
+    <div className="account-container">
+      <h1 className="account-title">Welcome to Your Dashboard</h1>
+      <p className="account-description">
+        Manage your transactions and check your balance easily.
+      </p>
+      <div className="account-actions">
+        <button className="account-button" onClick={() => navigate('/withdraw')}>Withdraw</button>
+        <button className="account-button" onClick={() => navigate('/deposit')}>Deposit</button>
+        <button className="account-button" onClick={() => navigate('/balance')}>Check Balance</button>
+      </div>
     </div>
   );
 }

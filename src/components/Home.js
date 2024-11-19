@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { getUser } from '../api';
-import Navbar from './Navbar';
+// import Navbar from './Navbar';
 import './Home.css';
 
 function Home({ setUser }) {
@@ -24,7 +24,7 @@ function Home({ setUser }) {
   
   return (
     <>
-      <Navbar />
+      {/* <Navbar /> */}
       <div className="home-container">
         <div className="home-card">
           <h2>Welcome to EXL ATM</h2>
