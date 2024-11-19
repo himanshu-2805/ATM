@@ -13,14 +13,15 @@ function Home({ setUser }) {
   const handleLogin = async () => {
     const user = await getUser(accountNumber, pin);
     if (user) {
-      setUser(user);
+      console.log("Logged-in user:", user); // Debugging log
+      setUser(user); // This will pass the full user object, including `id`
       navigate('/account');
     } else {
       setErrorMessage('Invalid account number or PIN');
       setTimeout(() => setErrorMessage(''), 3000);
     }
   };
-
+  
   return (
     <>
       <Navbar />

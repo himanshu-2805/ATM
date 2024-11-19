@@ -1,14 +1,16 @@
 {
   "users": [
     {
-      "accountNumber": "123456",
+      "id": 1,
+      "accountNumber": "12345",
       "pin": "1234",
-      "balance": 1000
+      "balance": 961
     },
     {
-      "accountNumber": "654321",
-      "pin": "4321",
-      "balance": 500
+      "id": 2,
+      "accountNumber": "124556",
+      "pin": "4567",
+      "balance": 9999
     }
   ]
 }

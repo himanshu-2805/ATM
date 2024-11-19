@@ -5,6 +5,7 @@ import Account from './components/Account';
 import Withdraw from './components/Withdraw';
 import Deposit from './components/Deposit';
 import Balance from './components/Balance';
+import SuccessPage from './components/SuccessPage';
 
 function App() {
   const [user, setUser] = useState(null);
@@ -19,6 +20,7 @@ function App() {
             <Route path="/withdraw" element={<Withdraw user={user} setUser={setUser} />} />
             <Route path="/deposit" element={<Deposit user={user} setUser={setUser} />} />
             <Route path="/balance" element={<Balance user={user} />} />
+            <Route path="/success" element={<SuccessPage />} />
           </>
         )}
       </Routes>
