@@ -1,7 +1,10 @@
 import React from 'react';
+import { useNavigate } from 'react-router-dom';
 import './Balance.css';
 
 function Balance({ user }) {
+  const navigate = useNavigate();
+
   return (
     <div className="balance-container">
       <h2>Account Balance</h2>
@@ -9,6 +12,9 @@ function Balance({ user }) {
         <p>Your current balance is:</p>
         <h1 className="balance-amount">₹{user.balance.toFixed(2)}</h1>
       </div>
+      <button className="btn" onClick={() => navigate('/account')}>
+        Go Back to Account Home
+      </button>
     </div>
   );
 }

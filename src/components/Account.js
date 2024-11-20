@@ -7,7 +7,7 @@ function Account() {
 
   return (
     <div className="account-container">
-      <h1 className="account-title">Welcome to Your Dashboard</h1>
+      <h1 className="account-title">Welcome to Your EXL Account</h1>
       <p className="account-description">
         Manage your transactions and check your balance easily.
       </p>

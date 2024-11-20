@@ -16,6 +16,12 @@ function Withdraw({ user, setUser }) {
       return;
     }
 
+    if (withdrawAmount > 40000) {
+      setErrorMessage('Withdrawal limit exceeded. The maximum amount is ₹40,000.');
+      setTimeout(() => setErrorMessage(''), 3000);
+      return;
+    }
+
     if (withdrawAmount > user.balance) {
       setErrorMessage('Insufficient balance');
       setTimeout(() => setErrorMessage(''), 3000);

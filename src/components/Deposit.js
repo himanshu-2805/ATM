@@ -10,8 +10,15 @@ function Deposit({ user, setUser }) {
   const handleDeposit = async () => {
     const depositAmount = Number(amount);
 
+    // Validate the entered amount
     if (isNaN(depositAmount) || depositAmount <= 0) {
       setErrorMessage('Please enter a valid amount');
+      setTimeout(() => setErrorMessage(''), 3000);
+      return;
+    }
+
+    if (depositAmount > 49900) {
+      setErrorMessage('Deposit limit exceeded. The maximum amount is ₹49,900.');
       setTimeout(() => setErrorMessage(''), 3000);
       return;
     }
