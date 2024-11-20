@@ -15,6 +15,7 @@ function Account() {
         <button className="account-button" onClick={() => navigate('/withdraw')}>Withdraw</button>
         <button className="account-button" onClick={() => navigate('/deposit')}>Deposit</button>
         <button className="account-button" onClick={() => navigate('/balance')}>Check Balance</button>
+        <button className="account-button fast-withdraw-button" onClick={() => navigate('/fastwithdraw')}>Fast Withdraw</button>
       </div>
     </div>
   );

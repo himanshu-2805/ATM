@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { updateUserBalance } from '../api';
+import './Withdraw.css';
 
 function Withdraw({ user, setUser }) {
   const [amount, setAmount] = useState('');
@@ -12,6 +13,18 @@ function Withdraw({ user, setUser }) {
 
     if (isNaN(withdrawAmount) || withdrawAmount <= 0) {
       setErrorMessage('Please enter a valid amount');
+      setTimeout(() => setErrorMessage(''), 3000);
+      return;
+    }
+
+    if (withdrawAmount < 100) {
+      setErrorMessage('Withdrawal amount must be at least ₹100.');
+      setTimeout(() => setErrorMessage(''), 3000);
+      return;
+    }
+
+    if (withdrawAmount % 100 !== 0) {
+      setErrorMessage('Withdrawal amount must be a multiple of ₹100.');
       setTimeout(() => setErrorMessage(''), 3000);
       return;
     }
@@ -51,6 +64,11 @@ function Withdraw({ user, setUser }) {
     }
   };
 
+  // Function to handle numpad button click
+  const handleNumpadClick = (value) => {
+    setAmount((prevAmount) => prevAmount + value);
+  };
+
   return (
     <div className="transaction">
       <h2>Withdraw Money</h2>
@@ -58,8 +76,26 @@ function Withdraw({ user, setUser }) {
         type="number"
         value={amount}
         placeholder="Enter amount"
-        onChange={(e) => setAmount(e.target.value)}
+        readOnly
+        className="transaction-input"
       />
+      <div className="numpad">
+        {[1, 2, 3, 4, 5, 6, 7, 8, 9, 0].map((num) => (
+          <button
+            key={num}
+            className="numpad-button"
+            onClick={() => handleNumpadClick(num.toString())}
+          >
+            {num}
+          </button>
+        ))}
+        <button
+          className="numpad-button"
+          onClick={() => setAmount('')} /* Clear the input */
+        >
+          Clear
+        </button>
+      </div>
       <button onClick={handleWithdraw} className="btn">Withdraw</button>
       {errorMessage && <div className="error-message">{errorMessage}</div>}
     </div>

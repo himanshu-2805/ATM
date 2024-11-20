@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { updateUserBalance } from '../api';
+import './Deposit.css';
 
 function Deposit({ user, setUser }) {
   const [amount, setAmount] = useState('');
@@ -17,8 +18,20 @@ function Deposit({ user, setUser }) {
       return;
     }
 
+    if (depositAmount < 100) {
+      setErrorMessage('Deposit amount must be at least ₹100.');
+      setTimeout(() => setErrorMessage(''), 3000);
+      return;
+    }
+
     if (depositAmount > 49900) {
       setErrorMessage('Deposit limit exceeded. The maximum amount is ₹49,900.');
+      setTimeout(() => setErrorMessage(''), 3000);
+      return;
+    }
+
+    if (depositAmount % 100 !== 0) {
+      setErrorMessage('Deposit amount must be a multiple of ₹100.');
       setTimeout(() => setErrorMessage(''), 3000);
       return;
     }
@@ -46,6 +59,11 @@ function Deposit({ user, setUser }) {
     }
   };
 
+  // Function to handle numpad button click
+  const handleNumpadClick = (value) => {
+    setAmount((prevAmount) => prevAmount + value);
+  };
+
   return (
     <div className="transaction">
       <h2>Deposit Money</h2>
@@ -53,8 +71,26 @@ function Deposit({ user, setUser }) {
         type="number"
         value={amount}
         placeholder="Enter amount"
-        onChange={(e) => setAmount(e.target.value)}
+        readOnly
+        className="transaction-input"
       />
+      <div className="numpad">
+        {[1, 2, 3, 4, 5, 6, 7, 8, 9, 0].map((num) => (
+          <button
+            key={num}
+            className="numpad-button"
+            onClick={() => handleNumpadClick(num.toString())}
+          >
+            {num}
+          </button>
+        ))}
+        <button
+          className="numpad-button"
+          onClick={() => setAmount('')} /* Clear the input */
+        >
+          Clear
+        </button>
+      </div>
       <button onClick={handleDeposit} className="btn">Deposit</button>
       {errorMessage && <div className="error-message">{errorMessage}</div>}
     </div>

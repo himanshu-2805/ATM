@@ -6,6 +6,8 @@ import Withdraw from './components/Withdraw';
 import Deposit from './components/Deposit';
 import Balance from './components/Balance';
 import SuccessPage from './components/SuccessPage';
+import FastWithdraw from './components/FastWithdraw'; 
+// import Header from './components/Header';
 import Navbar from './components/Navbar';
 
 function App() {
@@ -13,12 +15,14 @@ function App() {
 
   return (
     <Router>
-       <Navbar />
+        {/* <Header />  */}
+       {/* <Navbar /> */}
       <Routes>
         <Route path="/" element={<Home setUser={setUser} />} />
         {user && (
           <>
             <Route path="/account" element={<Account />} />
+            <Route path="/fastwithdraw" element={<FastWithdraw user={user} setUser={setUser} />} />
             <Route path="/withdraw" element={<Withdraw user={user} setUser={setUser} />} />
             <Route path="/deposit" element={<Deposit user={user} setUser={setUser} />} />
             <Route path="/balance" element={<Balance user={user} />} />
