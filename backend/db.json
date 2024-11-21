@@ -4,13 +4,43 @@
       "id": 1,
       "accountNumber": "12345",
       "pin": "1234",
-      "balance": 99099
+      "balance": 98199
     },
     {
       "id": 2,
       "accountNumber": "124556",
       "pin": "4567",
       "balance": 9999
+    }
+  ],
+  "transactions": [
+    {
+      "id": 1,
+      "userId": 1,
+      "date": "2024-11-20T10:00:00Z",
+      "description": "Deposit",
+      "amount": 2000
+    },
+    {
+      "id": 2,
+      "userId": 1,
+      "date": "2024-11-20T12:00:00Z",
+      "description": "Withdrawal",
+      "amount": -500
+    },
+    {
+      "userId": 1,
+      "date": "2024-11-21T05:46:49.408Z",
+      "description": "Deposit",
+      "amount": 100,
+      "id": 3
+    },
+    {
+      "userId": 1,
+      "date": "2024-11-21T05:48:18.586Z",
+      "description": "Withdraw",
+      "amount": 2000,
+      "id": 4
     }
   ]
 }

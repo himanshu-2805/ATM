@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-import { updateUserBalance } from '../api';
+import { updateUserBalance, addTransaction } from '../api';
 import './Withdraw.css';
 
 function Withdraw({ user, setUser }) {
@@ -52,6 +52,14 @@ function Withdraw({ user, setUser }) {
 
       // Update balance on the server
       await updateUserBalance(user.id, newBalance);
+
+      await addTransaction({
+        userId: user.id,
+        date: new Date().toISOString(),
+        description: 'Withdraw',
+        amount: withdrawAmount,
+      });
+  
 
       // Update the local user state
       setUser({ ...user, balance: newBalance });

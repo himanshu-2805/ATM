@@ -49,3 +49,25 @@ export const updateUserBalance = async (userId, newBalance) => {
     throw error;
   }
 };
+
+export const fetchUserTransactions = async (userId) => {
+  try {
+    const response = await api.get(`/transactions`, {
+      params: { userId }, // Use query parameters to filter by userId
+    });
+    return response.data;
+  } catch (error) {
+    console.error('Error fetching transactions:', error);
+    throw error;
+  }
+};
+
+export const addTransaction = async (transaction) => {
+  try {
+    const response = await api.post(`/transactions`, transaction);
+    return response.data;
+  } catch (error) {
+    console.error('Error adding transaction:', error);
+    throw error;
+  }
+};

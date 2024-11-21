@@ -1,15 +1,21 @@
 import React, { useEffect, useState } from 'react';
+import { fetchUserTransactions } from '../api'; // Import the API function
 import './Transactions.css';
 
 function Transactions({ user }) {
   const [transactions, setTransactions] = useState([]);
 
   useEffect(() => {
-    // Fetch transactions from the backend
-    fetch(`http://localhost:5000/api/transactions?userId=${user.id}`)
-      .then((res) => res.json())
-      .then((data) => setTransactions(data))
-      .catch((err) => console.error('Failed to fetch transactions:', err));
+    const getTransactions = async () => {
+      try {
+        const data = await fetchUserTransactions(user.id); // Fetch transactions using API
+        setTransactions(data);
+      } catch (err) {
+        console.error('Failed to fetch transactions:', err);
+      }
+    };
+
+    getTransactions();
   }, [user.id]);
 
   return (
