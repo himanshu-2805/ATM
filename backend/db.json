@@ -4,7 +4,7 @@
       "id": 1,
       "accountNumber": "12345",
       "pin": "1234",
-      "balance": 98199
+      "balance": 97299
     },
     {
       "id": 2,
@@ -41,6 +41,20 @@
       "description": "Withdraw",
       "amount": 2000,
       "id": 4
+    },
+    {
+      "userId": 1,
+      "date": "2024-11-21T08:03:34.446Z",
+      "description": "Withdraw",
+      "amount": 400,
+      "id": 5
+    },
+    {
+      "userId": 1,
+      "date": "2024-11-21T08:04:55.157Z",
+      "description": "Withdraw",
+      "amount": -500,
+      "id": 6
     }
   ]
 }

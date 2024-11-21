@@ -42,6 +42,7 @@ function Withdraw({ user, setUser }) {
     }
 
     const newBalance = user.balance - withdrawAmount;
+    const negwithdrawAmount = 0 - withdrawAmount;
 
     try {
       if (!user.id) {
@@ -57,7 +58,7 @@ function Withdraw({ user, setUser }) {
         userId: user.id,
         date: new Date().toISOString(),
         description: 'Withdraw',
-        amount: withdrawAmount,
+        amount: negwithdrawAmount,
       });
   
 
