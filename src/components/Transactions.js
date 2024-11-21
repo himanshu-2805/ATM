@@ -22,7 +22,7 @@ function Transactions({ user }) {
 
   return (
     <div className="transactions-container">
-      <h1>Recent Transactions</h1>
+      <h1>Mini Statement</h1>
       {transactions.length === 0 ? (
         <p>No transactions found.</p>
       ) : (

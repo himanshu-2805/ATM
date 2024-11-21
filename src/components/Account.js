@@ -17,7 +17,7 @@ function Account() {
         <button className="account-button" onClick={() => navigate('/balance')}>Check Balance</button>
         <button className="account-button" onClick={() => navigate('/fastwithdraw')}>Fast Withdraw</button>
         <button className="account-button" onClick={() => navigate('/changepin')}>Change PIN</button>
-        <button className="account-button" onClick={() => navigate('/transactions')}>View Transactions</button>
+        <button className="account-button" onClick={() => navigate('/transactions')}>Mini Statement</button>
       </div>
     </div>
   );

@@ -1,32 +1,68 @@
-/* General Transaction Styles */
+/* General Container Styling */
+.transactions-container {
+  max-width: 900px;
+  margin: 50px auto;
+  background-color: #ffffff;
+  border-radius: 15px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  padding: 20px 30px;
+  text-align: center;
+}
+
+/* Title Styling */
+.transactions-container h1 {
+  font-size: 28px;
+  font-weight: bold;
+  color: #005fa3;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+}
+
+/* Table Styling */
 .transactions-table {
   width: 100%;
   border-collapse: collapse;
   margin-top: 20px;
+  font-size: 16px;
+}
+
+.transactions-table thead {
+  background-color: #005fa3;
+  color: white;
 }
 
 .transactions-table th,
 .transactions-table td {
   border: 1px solid #ddd;
-  padding: 10px;
-  text-align: left;
+  padding: 12px;
+  text-align: center;
 }
 
 .transactions-table th {
-  background-color: #005fa3;
-  color: white;
-}
-
-.transactions-table .transaction-amount {
+  text-transform: uppercase;
   font-weight: bold;
 }
 
-.transactions-table .transaction-amount.deposit {
-  color: green;
+.transactions-table tbody tr:nth-child(odd) {
+  background-color: #f9f9f9;
 }
 
-.transactions-table .transaction-amount.withdraw {
+.transactions-table tbody tr:nth-child(even) {
+  background-color: #eef5fc;
+}
+
+.transactions-table tbody tr:hover {
+  background-color: #dce6f1;
+}
+
+.transaction-amount.deposit {
+  color: green;
+  font-weight: bold;
+}
+
+.transaction-amount.withdraw {
   color: red;
+  font-weight: bold;
 }
 
 /* Back to Account Button */
@@ -35,7 +71,7 @@
   color: white;
   border: none;
   border-radius: 10px;
-  padding: 10px 20px;
+  padding: 12px 20px;
   font-size: 16px;
   font-weight: bold;
   cursor: pointer;
@@ -52,4 +88,20 @@
 
 .back-to-account-button:active {
   transform: translateY(3px);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .transactions-container {
+    padding: 15px;
+  }
+
+  .transactions-table {
+    font-size: 14px;
+  }
+
+  .back-to-account-button {
+    width: 100%;
+    padding: 14px 0;
+  }
 }
