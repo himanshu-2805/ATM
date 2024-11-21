@@ -1,9 +1,11 @@
 import React, { useEffect, useState } from 'react';
+import { useNavigate } from 'react-router-dom'; // Import useNavigate for navigation
 import { fetchUserTransactions } from '../api'; // Import the API function
 import './Transactions.css';
 
 function Transactions({ user }) {
   const [transactions, setTransactions] = useState([]);
+  const navigate = useNavigate(); // Initialize useNavigate
 
   useEffect(() => {
     const getTransactions = async () => {
@@ -37,12 +39,27 @@ function Transactions({ user }) {
               <tr key={index}>
                 <td>{new Date(transaction.date).toLocaleString()}</td>
                 <td>{transaction.description}</td>
-                <td>₹{transaction.amount}</td>
+                <td
+                  className={
+                    transaction.amount > 0
+                      ? 'transaction-amount deposit'
+                      : 'transaction-amount withdraw'
+                  }
+                >
+                  ₹{transaction.amount}
+                </td>
               </tr>
             ))}
           </tbody>
         </table>
       )}
+      {/* Add Back to Account button */}
+      <button 
+        className="back-to-account-button" 
+        onClick={() => navigate('/account')}
+      >
+        Back to Account
+      </button>
     </div>
   );
 }
