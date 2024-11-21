@@ -34,7 +34,7 @@ function FastWithdraw({ user, setUser }) {
       await addTransaction({
         userId: user.id,
         date: new Date().toISOString(),
-        description: 'Withdraw',
+        description: 'Debit',
         amount: negwithdrawAmount,
       });
 

@@ -9,7 +9,7 @@ body {
   
   /* Account Container */
   .account-container {
-    max-width: 700px; /* Increased width for a larger container */
+    max-width: 400px; /* Increased width for a larger container */
     margin: 60px auto; /* Added more vertical spacing */
     padding: 30px 40px; /* Increased padding for a spacious layout */
     background-color: #ffffff;
@@ -43,7 +43,20 @@ body {
   }
   
   /* Buttons */
-  .account-button {
+  .account-buttonR {
+    background: #005fa3;
+    color: #ffffff;
+    border: none;
+    border-radius: 30px; /* Bigger button with rounder corners */
+    padding: 15px 30px; /*Larger padding for a bigger button */
+    font-size: 18px;    /* Larger text for buttons */
+    font-weight: bold;
+    cursor: pointer;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+  }
+
+  .account-buttonL {
     background: #005fa3;
     color: #ffffff;
     border: none;
@@ -75,11 +88,14 @@ body {
     .account-actions {
       flex-direction: column; /* Stack buttons vertically */
       gap: 15px; /* Slightly increased gap for better spacing */
+      display: grid;
+      justify-content: center;
+      grid-template-columns: repeat(3, 1fr);
     }
   
     .account-button {
       width: 100%; /* Full-width buttons on small screens */
-      padding: 15px 0; /* Maintain padding */
+      /* padding: 15px 0; Maintain padding */
       font-size: 16px; /* Slightly smaller text for better fit */
     }
   }

@@ -51,7 +51,7 @@ function Deposit({ user, setUser }) {
       await addTransaction({
         userId: user.id,
         date: new Date().toISOString(),
-        description: 'Deposit',
+        description: 'Credit',
         amount: depositAmount,
       });
   

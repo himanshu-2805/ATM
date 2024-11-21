@@ -12,12 +12,12 @@ function Account() {
         Manage your transactions and access account features easily.
       </p>
       <div className="account-actions">
-        <button className="account-button" onClick={() => navigate('/withdraw')}>Withdraw</button>
-        <button className="account-button" onClick={() => navigate('/deposit')}>Deposit</button>
-        <button className="account-button" onClick={() => navigate('/balance')}>Check Balance</button>
-        <button className="account-button" onClick={() => navigate('/fastwithdraw')}>Fast Withdraw</button>
-        <button className="account-button" onClick={() => navigate('/changepin')}>Change PIN</button>
-        <button className="account-button" onClick={() => navigate('/transactions')}>Mini Statement</button>
+        <button className="account-buttonL" onClick={() => navigate('/withdraw')}>Withdraw</button>
+        <button className="account-buttonR" onClick={() => navigate('/deposit')}>Deposit</button>
+        <button className="account-buttonL" onClick={() => navigate('/balance')}>Check Balance</button>
+        <button className="account-buttonR" onClick={() => navigate('/fastwithdraw')}>Fast Withdraw</button>
+        <button className="account-buttonL" onClick={() => navigate('/changepin')}>Change PIN</button>
+        <button className="account-buttonR" onClick={() => navigate('/transactions')}>Mini Statement</button>
       </div>
     </div>
   );
