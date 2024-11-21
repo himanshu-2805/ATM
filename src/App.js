@@ -6,6 +6,8 @@ import Withdraw from './components/Withdraw';
 import Deposit from './components/Deposit';
 import Balance from './components/Balance';
 import SuccessPage from './components/SuccessPage';
+import ChangePin from './components/ChangePin';
+import Transactions from './components/Transactions';
 import FastWithdraw from './components/FastWithdraw'; 
 // import Header from './components/Header';
 import Navbar from './components/Navbar';
@@ -26,6 +28,8 @@ function App() {
             <Route path="/withdraw" element={<Withdraw user={user} setUser={setUser} />} />
             <Route path="/deposit" element={<Deposit user={user} setUser={setUser} />} />
             <Route path="/balance" element={<Balance user={user} />} />
+            <Route path="/changepin" element={<ChangePin user={user} setUser={setUser} />} />
+  <Route path="/transactions" element={<Transactions user={user} />} />
             <Route path="/success" element={<SuccessPage />} />
           </>
         )}

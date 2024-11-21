@@ -1,0 +1,23 @@
+.transactions-container {
+    max-width: 800px;
+    margin: 50px auto;
+  }
+  
+  .transactions-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+  }
+  
+  .transactions-table th,
+  .transactions-table td {
+    border: 1px solid #ccc;
+    padding: 10px;
+    text-align: left;
+  }
+  
+  .transactions-table th {
+    background-color: #005fa3;
+    color: white;
+  }
+  

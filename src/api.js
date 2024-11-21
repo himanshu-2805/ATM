@@ -26,6 +26,17 @@ export const getUser = async (accountNumber, pin) => {
   }
 };
 
+export const updateUserPin = async (userId, newPin) => {
+  try {
+    const response = await api.patch(`/users/${userId}`, { pin: newPin });
+    return response.data;
+  } catch (error) {
+    console.error('Error updating PIN:', error);
+    throw error;
+  }
+};
+
+
 /**
  * Update user balance by ID
  */

@@ -1,0 +1,19 @@
+.change-pin-container {
+    max-width: 400px;
+    margin: 50px auto;
+    text-align: center;
+  }
+  
+  .change-pin-container input {
+    width: 100%;
+    margin-bottom: 15px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  
+  .message {
+    color: green;
+    margin-bottom: 15px;
+  }
+  
