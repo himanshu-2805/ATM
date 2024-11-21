@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-import { updateUserBalance } from '../api';
+import { updateUserBalance , addTransaction } from '../api';
 import './FastWithdraw.css';
 
 function FastWithdraw({ user, setUser }) {
@@ -26,9 +26,17 @@ function FastWithdraw({ user, setUser }) {
 
       // Update balance on the server
       await updateUserBalance(user.id, newBalance);
+      const negwithdrawAmount = 0 - amount;
 
       // Update the local user state
       setUser({ ...user, balance: newBalance });
+
+      await addTransaction({
+        userId: user.id,
+        date: new Date().toISOString(),
+        description: 'Withdraw',
+        amount: negwithdrawAmount,
+      });
 
       // Navigate to SuccessPage with remaining balance
       navigate('/success', { state: { remainingBalance: newBalance } });
