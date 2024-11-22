@@ -2,14 +2,14 @@
   "users": [
     {
       "id": 1,
-      "accountNumber": "12345",
-      "pin": "1234",
-      "balance": 87299
+      "accountNumber": "284941940597",
+      "pin": "0987",
+      "balance": 99
     },
     {
       "id": 2,
-      "accountNumber": "124556",
-      "pin": "4567",
+      "accountNumber": "12345",
+      "pin": "1234",
       "balance": 9999
     }
   ],
@@ -125,6 +125,132 @@
       "description": "Withdraw",
       "amount": -100,
       "id": 16
+    },
+    {
+      "userId": 1,
+      "date": "2024-11-21T18:56:19.217Z",
+      "description": "Debit",
+      "amount": -10000,
+      "id": 17
+    },
+    {
+      "userId": 1,
+      "date": "2024-11-21T18:56:28.578Z",
+      "description": "Debit",
+      "amount": -15000,
+      "id": 18
+    },
+    {
+      "userId": 1,
+      "date": "2024-11-21T20:13:58.806Z",
+      "description": "Debit",
+      "amount": -10000,
+      "id": 19
+    },
+    {
+      "userId": 1,
+      "date": "2024-11-22T06:11:32.835Z",
+      "description": "Credit",
+      "amount": 1000,
+      "id": 20
+    },
+    {
+      "userId": 1,
+      "date": "2024-11-22T06:11:43.425Z",
+      "description": "Credit",
+      "amount": 1000,
+      "id": 21
+    },
+    {
+      "userId": 1,
+      "date": "2024-11-22T06:11:43.439Z",
+      "description": "Credit",
+      "amount": 1000,
+      "id": 22
+    },
+    {
+      "userId": 1,
+      "date": "2024-11-22T06:12:39.359Z",
+      "description": "Debit",
+      "amount": -10000,
+      "id": 23
+    },
+    {
+      "userId": 1,
+      "date": "2024-11-22T06:58:02.494Z",
+      "description": "Credit",
+      "amount": 2000,
+      "id": 24
+    },
+    {
+      "userId": 1,
+      "date": "2024-11-22T09:28:34.596Z",
+      "description": "Withdraw",
+      "amount": -100,
+      "id": 25
+    },
+    {
+      "userId": 1,
+      "date": "2024-11-22T11:33:06.169Z",
+      "description": "Withdraw",
+      "amount": -100,
+      "id": 26
+    },
+    {
+      "userId": 1,
+      "date": "2024-11-22T11:37:03.565Z",
+      "description": "Withdraw",
+      "amount": -100,
+      "id": 27
+    },
+    {
+      "userId": 1,
+      "date": "2024-11-22T11:39:20.642Z",
+      "description": "Credit",
+      "amount": 1500,
+      "id": 28
+    },
+    {
+      "userId": 1,
+      "date": "2024-11-22T12:19:42.287Z",
+      "description": "Credit",
+      "amount": 49000,
+      "id": 29
+    },
+    {
+      "userId": 1,
+      "date": "2024-11-22T12:20:48.384Z",
+      "description": "Credit",
+      "amount": 1000,
+      "id": 30
+    },
+    {
+      "userId": 1,
+      "date": "2024-11-22T12:24:17.753Z",
+      "description": "Debit",
+      "amount": -5000,
+      "id": 31
+    },
+    {
+      "userId": 1,
+      "date": "2024-11-22T12:25:54.554Z",
+      "description": "Debit",
+      "amount": -35000,
+      "id": 32
+    },
+    {
+      "userId": 1,
+      "date": "2024-11-22T12:26:23.634Z",
+      "description": "Debit",
+      "amount": -35000,
+      "id": 33
+    },
+    {
+      "userId": 1,
+      "date": "2024-11-22T12:27:40.707Z",
+      "description": "Debit",
+      "amount": -21400,
+      "id": 34
     }
   ]
 }

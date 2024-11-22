@@ -36,7 +36,7 @@ function ChangePin({ user, setUser }) {
       // Update the local user state
       setUser({ ...user, pin: newPin });
       setMessage('PIN changed successfully!');
-      setTimeout(() => navigate('/account'), 3000); // Redirect after success
+      setTimeout(() => navigate('/'), 3000); // Redirect after success
     } catch (error) {
       console.error('Error changing PIN:', error);
       setMessage('Failed to change PIN. Please try again.');

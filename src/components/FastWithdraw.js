@@ -6,7 +6,7 @@ import './FastWithdraw.css';
 function FastWithdraw({ user, setUser }) {
   const [errorMessage, setErrorMessage] = useState('');
   const navigate = useNavigate();
-  const amounts = [5000, 10000, 15000, 20000]; // Predefined amounts
+  const amounts = [ 10000,   20000]; // Predefined amounts
 
   const handleFastWithdraw = async (amount) => {
     if (user.balance < amount) {

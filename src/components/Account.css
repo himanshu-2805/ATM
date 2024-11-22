@@ -36,7 +36,12 @@ body {
   
   /* Action Buttons Container */
   .account-actions {
-    display: flex;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* 3 columns */
+    gap: 20px; /* space between buttons */
+    max-width: 80%; /* Limit width */
+    margin: 0 auto; /* Center the grid */
+    padding-top: 20px; /* Add some space from the top */
     justify-content: center;
     gap: 20px; /* Increased spacing between buttons */
     flex-wrap: wrap;
