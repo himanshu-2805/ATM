@@ -35,8 +35,8 @@ const styles = {
   
   topRightContainer: {
     position: 'absolute',
-    top: '56px', // Position from the top of the screen
-    right: '10px', // Position from the right of the screen
+    top: '46px', // Position from the top of the screen
+    right: '5px', // Position from the right of the screen
     display: 'flex', // Use flexbox to align the icon and text
     alignItems: 'center', // Vertically center the items
   },

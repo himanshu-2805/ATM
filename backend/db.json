@@ -3,14 +3,14 @@
     {
       "id": 1,
       "accountNumber": "284941940597",
-      "pin": "1234",
+      "pin": "0987",
       "balance": 99
     },
     {
       "id": 2,
       "accountNumber": "12345",
-      "pin": "4321",
-      "balance": 9999
+      "pin": "1234",
+      "balance": 10299
     }
   ],
   "transactions": [
@@ -251,6 +251,13 @@
       "description": "Debit",
       "amount": -21400,
       "id": 34
+    },
+    {
+      "userId": 2,
+      "date": "2024-11-25T12:50:08.900Z",
+      "description": "Credit",
+      "amount": 300,
+      "id": 35
     }
   ]
 }

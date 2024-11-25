@@ -1,12 +1,13 @@
-/* General Container Styling */
+/* Transactions Container */
 .transactions-container {
-  max-width: 900px;
-  margin: 50px auto;
+  max-width: 400px; /* Matches other container widths */
+  margin: 40px auto;
+  padding: 20px;
   background-color: #ffffff;
   border-radius: 15px;
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
-  padding: 20px 30px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
   text-align: center;
+  overflow: hidden; /* Prevent content overflow */
 }
 
 /* Title Styling */
@@ -15,79 +16,78 @@
   font-weight: bold;
   color: #005fa3;
   margin-bottom: 20px;
-  text-transform: uppercase;
 }
 
 /* Table Styling */
 .transactions-table {
   width: 100%;
   border-collapse: collapse;
-  margin-top: 20px;
-  font-size: 16px;
+  margin-bottom: 20px;
 }
 
-.transactions-table thead {
-  background-color: #005fa3;
-  color: white;
-}
-
-.transactions-table th,
+.transactions-table th, 
 .transactions-table td {
-  border: 1px solid #ddd;
-  padding: 12px;
-  text-align: center;
+  padding: 10px;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
 }
 
 .transactions-table th {
-  text-transform: uppercase;
+  background-color: #f3f9ff;
+  color: #005fa3;
   font-weight: bold;
 }
 
-.transactions-table tbody tr:nth-child(odd) {
-  background-color: #f9f9f9;
-}
-
-.transactions-table tbody tr:nth-child(even) {
-  background-color: #eef5fc;
-}
-
 .transactions-table tbody tr:hover {
-  background-color: #dce6f1;
+  background-color: #f3f9ff;
 }
 
+/* Scrollable Table Body */
+.transactions-table tbody {
+  display: block;
+  max-height: 300px; /* Set a fixed height for the scrollable area */
+  overflow-y: auto; /* Enable vertical scrolling */
+}
+
+.transactions-table thead, 
+.transactions-table tbody tr {
+  display: table;
+  width: 100%; /* Ensure table cells align correctly */
+  table-layout: fixed; /* Prevent cells from resizing unevenly */
+}
+
+/* Transaction Amount Styling */
 .transaction-amount.deposit {
-  color: green;
+  color: #28a745; /* Green for deposits */
   font-weight: bold;
 }
 
 .transaction-amount.withdraw {
-  color: red;
+  color: #ff4b5c; /* Red for withdrawals */
   font-weight: bold;
 }
 
 /* Back to Account Button */
 .back-to-account-button {
-  background-color: #005fa3;
-  color: white;
+  background: #005fa3;
+  color: #ffffff;
   border: none;
-  border-radius: 10px;
-  padding: 12px 20px;
+  border-radius: 25px;
+  padding: 10px 20px;
   font-size: 16px;
   font-weight: bold;
   cursor: pointer;
-  margin-top: 20px;
-  transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
+  transition: all 0.3s ease;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
 .back-to-account-button:hover {
-  background-color: #0077cc;
-  transform: translateY(-3px);
+  background: #0077cc;
   box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
 }
 
 .back-to-account-button:active {
-  transform: translateY(3px);
+  transform: translateY(2px);
 }
 
 /* Responsive Design */
@@ -96,12 +96,12 @@
     padding: 15px;
   }
 
-  .transactions-table {
+  .transactions-table th,
+  .transactions-table td {
     font-size: 14px;
   }
 
   .back-to-account-button {
     width: 100%;
-    padding: 14px 0;
   }
 }

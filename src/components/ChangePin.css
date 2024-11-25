@@ -1,19 +1,82 @@
 .change-pin-container {
-    max-width: 480px;
-    margin: 50px auto;
-    text-align: center;
+  max-width: 400px; /* Consistent width */
+  margin: 0px ; /* Vertical spacing to match other components */
+  /* padding: 30px; Consistent padding */
+  background-color: #ffffff;
+  border-radius: 15px; /* Rounded corners match other components */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1); /* Unified shadow thickness */
+  text-align: center;
+}
+
+.change-pin-container h1 {
+  font-size: 28px; /* Prominent heading size */
+  color: #005fa3; /* Primary color */
+  margin-bottom: 150px; /* Equal spacing below heading */
+}
+
+.change-pin-container input {
+  width: 90%; /* Full width for better alignment */
+  margin-bottom: 20px; /* Even spacing between inputs */
+  padding: 12px; /* Standardized input padding */
+  border: 2px solid #ddd; /* Thicker border for consistency */
+  border-radius: 8px;
+  font-size: 16px;
+  box-shadow: inset 0 4px 8px rgba(0, 0, 0, 0.05); /* Subtle inner shadow */
+  transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+.change-pin-container input:focus {
+  outline: none;
+  border-color: #0077cc; /* Highlight border on focus */
+  box-shadow: 0 0 8px rgba(0, 119, 204, 0.3); /* Uniform focus glow */
+}
+
+.message {
+  color: red; /* Consistent error message styling */
+  margin-bottom: 20px;
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.change-pin-container .btn {
+  background-color: #005fa3;
+  color: #ffffff;
+  border: none;
+  border-radius: 30px; /* Match button styling */
+  padding: 12px 30px;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.2s, box-shadow 0.3s;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1); /* Same shadow as other buttons */
+}
+
+.change-pin-container .btn:hover {
+  background-color: #0077cc; /* Hover color matches app theme */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15); /* Slightly deeper hover shadow */
+  transform: translateY(-3px); /* Uniform hover animation */
+}
+
+.change-pin-container .btn:active {
+  transform: translateY(1px); /* Consistent active state */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .change-pin-container {
+      padding: 20px; /* Adjusted for smaller screens */
   }
-  
+
+  .change-pin-container h1 {
+      font-size: 24px; /* Responsive font size */
+  }
+
   .change-pin-container input {
-    width: 90%;
-    /* margin-bottom: 15px; */
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
+      font-size: 14px; /* Adjusted input font size */
   }
-  
-  .message {
-    color: red;
-    margin-bottom: 15px;
+
+  .change-pin-container .btn {
+      padding: 10px 20px; /* Smaller padding for compact design */
+      font-size: 14px; /* Adjusted button font size */
   }
-  
+}

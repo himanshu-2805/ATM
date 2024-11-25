@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import './Header.css';
+import DateTime from './DateTime';
 
 function Header({ onLogout }) {
   const [timeElapsed, setTimeElapsed] = useState(0);
@@ -37,6 +38,7 @@ function Header({ onLogout }) {
         <button onClick={handleLogout} className="logout-button">
           Logout
         </button>
+        <DateTime/>
       </div>
     </header>
   );

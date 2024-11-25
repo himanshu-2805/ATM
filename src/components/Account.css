@@ -11,7 +11,7 @@ body {
   .account-container {
     max-width: 400px; /* Increased width for a larger container */
     margin: 60px auto; /* Added more vertical spacing */
-    padding: 30px 40px; /* Increased padding for a spacious layout */
+    padding: 30px; /* Increased padding for a spacious layout */
     background-color: #ffffff;
     box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.1);
     border-radius: 15px; /* Slightly rounder corners for a modern look */

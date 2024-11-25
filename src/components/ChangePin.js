@@ -51,6 +51,7 @@ function ChangePin({ user, setUser }) {
 
   return (
     <div className="change-pin-container">
+      
       <h1>Change PIN</h1>
       {message && <p className="message">{message}</p>}
       <input
