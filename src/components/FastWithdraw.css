@@ -1,78 +1,77 @@
 /* Fast Withdraw Container */
 .fast-withdraw-container {
-    width: 100%; /* Full width for responsiveness */
-    max-width: 400px; /* Matches the layout style of other pages */
-    margin: 20px auto; /* Center the container */
-    /* padding: 20px; Consistent padding */
-    background-color: #ffffff;
-    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.1); /* Unified shadow */
-    border-radius: 15px; /* Rounded corners for consistency */
-    text-align: center;
+  max-width: 410px; /* Matches the layout of Transactions */
+  margin: 40px auto; /* Centers the container */
+  padding: 90px; /* Consistent padding */
+  background-color: #ffffff;
+  box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.1); /* Unified shadow effect */
+  border-radius: 15px; /* Rounded corners for consistency */
+  text-align: center;
 }
 
 /* Title Styling */
 .fast-withdraw-container h1 {
-    font-size: 28px; /* Prominent heading size */
-    font-weight: bold;
-    color: #005fa3; /* Matches primary color scheme */
-    margin-bottom: 20px; /* Spacing below the title */
+  font-size: 28px; /* Prominent heading size */
+  font-weight: bold;
+  color: #005fa3; /* Matches primary color scheme */
+  margin-bottom: 20px; /* Spacing below the title */
 }
 
 /* Description */
 .fast-withdraw-container p {
-    font-size: 16px; /* Readable font size */
-    color: #555; /* Neutral text color */
-    margin-bottom: 20px; /* Spacing for the description */
-    line-height: 1.6; /* Comfortable line spacing */
+  font-size: 16px; /* Readable font size */
+  color: #555; /* Neutral text color */
+  margin-bottom: 20px; /* Spacing for the description */
+  line-height: 1.6; /* Comfortable line spacing */
 }
 
 /* Withdraw Options Container */
 .fast-withdraw-options {
-    display: grid; /* Use grid for a more structured layout */
-    grid-template-columns: repeat(2, 1fr); /* Two columns for buttons */
-    gap: 20px; /* Space between buttons */
-    justify-content: center; /* Center-align the buttons */
-    margin-top: 20px; /* Space above buttons */
+  display: grid; /* Use grid for structured layout */
+  grid-template-columns: repeat(2, 1fr); /* Two columns for buttons */
+  gap: 50px; /* Space between buttons */
+  justify-content: center; /* Center-align the buttons */
+  margin-top: 30px; /* Space above buttons */
 }
 
 /* Withdraw Buttons */
 .fast-withdraw-options button {
-    background-color: #005fa3;
-    color: white;
-    border: none;
-    border-radius: 10px;
-    padding: 15px 20px; /* Consistent padding */
-    font-size: 18px; /* Prominent font size */
-    font-weight: bold;
-    cursor: pointer;
-    transition: background-color 0.3s ease, transform 0.2s ease;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  background-color: #005fa3;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  padding: 15px 20px; /* Consistent padding */
+  font-size: 18px; /* Prominent font size */
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 .fast-withdraw-options button:hover {
-    background-color: #0077cc;
-    transform: translateY(-3px);
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+  background-color: #0077cc;
+  transform: translateY(-3px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
 }
 
 .fast-withdraw-options button:active {
-    transform: translateY(3px);
+  transform: translateY(3px);
 }
 
 /* Responsive Design */
 @media (max-width: 768px) {
-    .fast-withdraw-container {
-        width: 90%; /* Reduce width for smaller screens */
-        padding: 15px; /* Adjust padding */
-    }
+  .fast-withdraw-container {
+      width: 90%; /* Adjust width for smaller screens */
+      padding: 15px; /* Adjust padding */
+  }
 
-    .fast-withdraw-options {
-        grid-template-columns: repeat(1, 1fr); /* Single column on smaller screens */
-        gap: 15px; /* Adjust gap */
-    }
+  .fast-withdraw-options {
+      grid-template-columns: repeat(1, 1fr); /* Single column layout on smaller screens */
+      gap: 15px; /* Adjust gap */
+  }
 
-    .fast-withdraw-options button {
-        width: 100%; /* Full-width buttons for smaller screens */
-        font-size: 16px; /* Smaller font size for buttons */
-    }
+  .fast-withdraw-options button {
+      width: 100%; /* Full-width buttons on smaller screens */
+      font-size: 16px; /* Smaller font size for buttons */
+  }
 }

@@ -10,7 +10,7 @@
       "id": 2,
       "accountNumber": "12345",
       "pin": "1234",
-      "balance": 10299
+      "balance": 4299
     }
   ],
   "transactions": [
@@ -258,6 +258,20 @@
       "description": "Credit",
       "amount": 300,
       "id": 35
+    },
+    {
+      "userId": 2,
+      "date": "2024-11-25T13:24:37.328Z",
+      "description": "Debit",
+      "amount": -10000,
+      "id": 36
+    },
+    {
+      "userId": 2,
+      "date": "2024-11-25T13:24:49.528Z",
+      "description": "Credit",
+      "amount": 4000,
+      "id": 37
     }
   ]
 }

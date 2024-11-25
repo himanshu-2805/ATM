@@ -1,12 +1,14 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-import { updateUserBalance , addTransaction } from '../api';
+import { updateUserBalance, addTransaction } from '../api';
 import './FastWithdraw.css';
 
 function FastWithdraw({ user, setUser }) {
   const [errorMessage, setErrorMessage] = useState('');
   const navigate = useNavigate();
-  const amounts = [ 10000,   20000]; // Predefined amounts
+  
+  // Add more predefined amounts for fast withdrawal
+  const amounts = [5000, 10000, 15000, 20000, 25000, 30000];
 
   const handleFastWithdraw = async (amount) => {
     if (user.balance < amount) {
