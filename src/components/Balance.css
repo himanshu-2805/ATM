@@ -1,50 +1,56 @@
 /* Balance Component Styles */
 .balance-container {
-  width: 100%; /* Full width */
-  background-color: #ffffff; /* Matches the container background of other pages */
-  padding: 40px;
+  width: 100%; /* Set consistent width for layout */
+  max-width: 1000px; /* Matches the layout of transaction pages */
+  background-color: #ffffff; /* Matches the container background */
+  padding: 40px; /* Consistent padding */
   border-radius: 15px; /* Slightly rounded corners for consistency */
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1); /* Subtle shadow */
-  margin: 40px auto;
+  margin: 40px auto; /* Center the container */
   text-align: center; /* Center align text */
   animation: fadeIn 0.5s ease-in-out; /* Smooth entrance animation */
-  position: relative; /* Allows positioning child elements */
 }
 
+/* Heading Styles */
 .balance-container h2 {
   color: #005fa3; /* Matches the primary color scheme */
-  margin-bottom: 20px;
-  font-size: 32px; /* Prominent heading */
+  margin-bottom: 20px; /* Space below the heading */
+  font-size: 32px; /* Prominent heading size */
   font-weight: bold;
 }
 
+/* Card Styles */
 .balance-card {
-  background-color: #f3f9ff; /* Matches overall page background */
-  border-radius: 15px;
-  padding: 30px; /* Increased padding for a more spacious card */
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1); /* Consistent shadow effect */
+  background-color: #f3f9ff; /* Matches the overall page background */
+  border-radius: 15px; /* Rounded corners */
+  padding: 30px; /* Consistent padding */
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1); /* Unified shadow effect */
+  margin: 20px auto; /* Center the card within the container */
   transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
 }
 
+/* Hover Effect for Card */
 .balance-card:hover {
-  transform: translateY(-8px);
-  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.15); /* Subtle hover shadow effect */
+  transform: translateY(-8px); /* Subtle hover effect */
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.15); /* Enhanced shadow on hover */
 }
 
+/* Paragraph Styles */
 .balance-card p {
   font-size: 18px; /* Clear and readable */
   color: #555; /* Neutral text color */
-  margin-bottom: 15px;
+  margin-bottom: 15px; /* Space below the text */
 }
 
+/* Balance Amount Styling */
 .balance-amount {
-  font-size: 44px; /* Slightly larger balance font for emphasis */
-  color: #28a745; /* Green for a positive balance */
-  font-weight: bold;
+  font-size: 44px; /* Larger font size for emphasis */
+  color: #28a745; /* Green color for positive balance */
+  font-weight: bold; /* Bold styling */
   animation: pulse 1.5s infinite; /* Subtle highlight animation */
 }
 
-/* Subtle fade-in animation for the entire container */
+/* Subtle fade-in animation for the container */
 @keyframes fadeIn {
   0% {
     opacity: 0;
@@ -56,7 +62,7 @@
   }
 }
 
-/* Add a subtle pulse effect to the balance */
+/* Subtle pulse animation for the balance */
 @keyframes pulse {
   0%, 100% {
     transform: scale(1);
@@ -66,10 +72,36 @@
   }
 }
 
+/* Back to Account Button */
+.back-to-account-button {
+  margin-top: 20px; /* Space above the button */
+  background-color: #005fa3; /* Primary color */
+  color: #ffffff; /* Text color */
+  border: none;
+  border-radius: 8px; /* Rounded corners */
+  padding: 12px 24px; /* Button padding */
+  font-size: 16px; /* Font size */
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+}
+
+.back-to-account-button:hover {
+  background-color: #0077cc; /* Hover color */
+  transform: translateY(-3px); /* Lift on hover */
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); /* Enhanced shadow */
+}
+
+.back-to-account-button:active {
+  transform: translateY(3px); /* Button press effect */
+}
+
 /* Responsive Design */
 @media (max-width: 768px) {
   .balance-container {
-    padding: 25px; /* Adjust padding for smaller screens */
+    width: 95%; /* Slightly smaller width for small screens */
+    padding: 25px; /* Adjust padding */
   }
 
   .balance-card {
@@ -81,6 +113,11 @@
   }
 
   .balance-container h2 {
-    font-size: 28px; /* Adjust heading size for mobile */
+    font-size: 28px; /* Adjust heading size for smaller screens */
+  }
+
+  .back-to-account-button {
+    width: 100%; /* Full-width button for smaller screens */
+    font-size: 14px; /* Adjust font size */
   }
 }

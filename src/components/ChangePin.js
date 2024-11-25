@@ -10,29 +10,28 @@ function ChangePin({ user, setUser }) {
   const [message, setMessage] = useState('');
   const navigate = useNavigate();
 
+  const redirectToLogin = () => {
+    setUser(null);
+    navigate('/');
+  };
+
   const handleChangePin = async () => {
-
-    // var cu = 0 , nc = 0 , l=0;
-
     if (currentPin !== user.pin) {
-      //  cu = 1;
       setMessage('Current PIN is incorrect.');
       setTimeout(() => setMessage(''), 3000);
-      // return;
+      return;
     }
 
     if (newPin !== confirmPin) {
-      //  nc = 1;
       setMessage('New PIN and Confirm PIN do not match.');
       setTimeout(() => setMessage(''), 3000);
-      // return;
+      return;
     }
 
     if (newPin.length !== 4 || isNaN(newPin)) {
-      // l=1;
       setMessage('PIN must be a 4-digit number.');
       setTimeout(() => setMessage(''), 3000);
-      // return;
+      return;
     }
 
     try {
@@ -41,8 +40,9 @@ function ChangePin({ user, setUser }) {
 
       // Update the local user state
       setUser({ ...user, pin: newPin });
-      setMessage('PIN changed successfully!');
-      setTimeout(() => navigate('/'), 3000); // Redirect after success
+
+      setMessage('PIN changed successfully! Redirecting to login page...');
+      setTimeout(() => redirectToLogin(), 3000); // Redirect after success
     } catch (error) {
       console.error('Error changing PIN:', error);
       setMessage('Failed to change PIN. Please try again.');
@@ -51,7 +51,6 @@ function ChangePin({ user, setUser }) {
 
   return (
     <div className="change-pin-container">
-      
       <h1>Change PIN</h1>
       {message && <p className="message">{message}</p>}
       <input
@@ -72,7 +71,9 @@ function ChangePin({ user, setUser }) {
         value={confirmPin}
         onChange={(e) => setConfirmPin(e.target.value)}
       />
-      <button onClick={handleChangePin} className="btn">Change PIN</button>
+      <button onClick={handleChangePin} className="btn">
+        Change PIN
+      </button>
     </div>
   );
 }
