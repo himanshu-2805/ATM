@@ -54,23 +54,52 @@ function ChangePin({ user, setUser }) {
       <h1>Change PIN</h1>
       {message && <p className="message">{message}</p>}
       <input
-        type="password"
-        placeholder="Current PIN"
-        value={currentPin}
-        onChange={(e) => setCurrentPin(e.target.value)}
-      />
-      <input
-        type="password"
-        placeholder="New PIN"
-        value={newPin}
-        onChange={(e) => setNewPin(e.target.value)}
-      />
-      <input
-        type="password"
-        placeholder="Confirm New PIN"
-        value={confirmPin}
-        onChange={(e) => setConfirmPin(e.target.value)}
-      />
+  type="password"
+  placeholder="Current PIN"
+  value={currentPin}
+  onChange={(e) => {
+    if (e.target.value.length <= 4) {
+      setCurrentPin(e.target.value);
+    }
+  }}
+  onKeyPress={(e) => {
+    if (!/[0-9]/.test(e.key)) {
+      e.preventDefault(); // Prevent non-numeric input
+    }
+  }}
+/>
+<input
+  type="password"
+  placeholder="New PIN"
+  value={newPin}
+  onChange={(e) => {
+    if (e.target.value.length <= 4) {
+      setNewPin(e.target.value);
+    }
+  }}
+  onKeyPress={(e) => {
+    if (!/[0-9]/.test(e.key)) {
+      e.preventDefault(); // Prevent non-numeric input
+    }
+  }}
+/>
+<input
+  type="password"
+  placeholder="Confirm New PIN"
+  value={confirmPin}
+  onChange={(e) => {
+    if (e.target.value.length <= 4) {
+      setConfirmPin(e.target.value);
+    }
+  }}
+  onKeyPress={(e) => {
+    if (!/[0-9]/.test(e.key)) {
+      e.preventDefault(); // Prevent non-numeric input
+    }
+  }}
+/>
+
+
       <button onClick={handleChangePin} className="btn">
         Change PIN
       </button>
