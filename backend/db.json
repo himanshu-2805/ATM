@@ -4,13 +4,13 @@
       "id": 1,
       "accountNumber": "284941940597",
       "pin": "0987",
-      "balance": 99
+      "balance": 799
     },
     {
       "id": 2,
       "accountNumber": "12345",
       "pin": "1234",
-      "balance": 4299
+      "balance": 5299
     }
   ],
   "transactions": [
@@ -272,6 +272,41 @@
       "description": "Credit",
       "amount": 4000,
       "id": 37
+    },
+    {
+      "userId": 2,
+      "date": "2024-11-25T17:26:12.071Z",
+      "description": "Credit",
+      "amount": 1000,
+      "id": 38
+    },
+    {
+      "userId": 1,
+      "date": "2024-11-25T17:29:50.996Z",
+      "description": "Credit",
+      "amount": 800,
+      "id": 39
+    },
+    {
+      "userId": 1,
+      "date": "2024-11-25T17:33:35.611Z",
+      "description": "Credit",
+      "amount": 500,
+      "id": 40
+    },
+    {
+      "userId": 1,
+      "date": "2024-11-25T17:34:03.622Z",
+      "description": "Debit",
+      "amount": -500,
+      "id": 41
+    },
+    {
+      "userId": 1,
+      "date": "2024-11-25T17:35:06.185Z",
+      "description": "Debit",
+      "amount": -100,
+      "id": 42
     }
   ]
 }
