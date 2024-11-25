@@ -11,22 +11,28 @@ function ChangePin({ user, setUser }) {
   const navigate = useNavigate();
 
   const handleChangePin = async () => {
+
+    // var cu = 0 , nc = 0 , l=0;
+
     if (currentPin !== user.pin) {
+      //  cu = 1;
       setMessage('Current PIN is incorrect.');
       setTimeout(() => setMessage(''), 3000);
-      return;
+      // return;
     }
 
     if (newPin !== confirmPin) {
+      //  nc = 1;
       setMessage('New PIN and Confirm PIN do not match.');
       setTimeout(() => setMessage(''), 3000);
-      return;
+      // return;
     }
 
     if (newPin.length !== 4 || isNaN(newPin)) {
+      // l=1;
       setMessage('PIN must be a 4-digit number.');
       setTimeout(() => setMessage(''), 3000);
-      return;
+      // return;
     }
 
     try {

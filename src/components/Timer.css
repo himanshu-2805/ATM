@@ -1,0 +1,13 @@
+.timer {
+    position: fixed; /* Fix at the top */
+    top: 4.1%;
+    right: 31.2%; /* Align to the top-right corner */
+    background-color: #0077cc;
+    color: #ffffff;
+    font-size: 14px;
+    padding: 10px 20px;
+    border-radius: 10px 10px 10px 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    z-index: 1000; /* Ensure it stays above other elements */
+  }
+  
