@@ -1,7 +1,7 @@
 .change-pin-container {
   max-width: 400px; /* Consistent width */
-  margin: 0px ; /* Vertical spacing to match other components */
-  /* padding: 30px; Consistent padding */
+  margin: 60px auto; /* Vertical spacing to match other components */
+  padding: 30px; /* Consistent padding */
   background-color: #ffffff;
   border-radius: 15px; /* Rounded corners match other components */
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1); /* Unified shadow thickness */
@@ -11,7 +11,7 @@
 .change-pin-container h1 {
   font-size: 28px; /* Prominent heading size */
   color: #005fa3; /* Primary color */
-  margin-bottom: 150px; /* Equal spacing below heading */
+  margin-bottom: 25px; /* Equal spacing below heading */
 }
 
 .change-pin-container input {
