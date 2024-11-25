@@ -13,7 +13,7 @@ function Balance({ user }) {
         <h1>₹{user.balance.toFixed(2)}</h1>
       </div>
       <button className="btn" onClick={() => navigate('/account')}>
-        Go Back to your Account 
+        Home 
       </button>
     </div>
   );

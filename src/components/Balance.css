@@ -1,7 +1,7 @@
 /* Balance Component Styles */
 .balance-container {
-  width:150 %; /* Set consistent width for layout */
-  max-width: 400px; /* Matches the layout of transaction pages */
+  width:380px; /* Set consistent width for layout */
+  max-width: 420px; /* Matches the layout of transaction pages */
   background-color: #ffffff; /* Matches the container background */
   padding: 40px; /* Consistent padding */
   border-radius: 15px; /* Slightly rounded corners for consistency */
@@ -25,7 +25,7 @@
   border-radius: 15px; /* Rounded corners */
   padding: 30px; /* Consistent padding */
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1); /* Unified shadow effect */
-  margin: 20px auto; /* Center the card within the container */
+  margin: 45px auto; /* Center the card within the container */
   transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
 }
 

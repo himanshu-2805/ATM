@@ -16,7 +16,7 @@ function SuccessPage() {
             Yes
           </button>
           <button className="btn" onClick={() => navigate('/account')}>
-           No go back to Account
+           No 
           </button>
         </div>
       </div>
