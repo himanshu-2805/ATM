@@ -72,9 +72,14 @@ function Deposit({ user, setUser }) {
     setAmount((prevAmount) => prevAmount + value);
   };
 
+  const handleClearSingle = () => {
+    setAmount((prevAmount) => prevAmount.slice(0, -1));
+  };
+
   return (
     <div className="transaction">
       <h2>Deposit Money</h2>
+      {errorMessage && <div className="error-message">{errorMessage}</div>}
       <input
         type="number"
         value={amount}
@@ -94,13 +99,13 @@ function Deposit({ user, setUser }) {
         ))}
         <button
           className="numpad-button"
-          onClick={() => setAmount('')} /* Clear the input */
+          onClick={handleClearSingle} /* Clear the input */
         >
           Clear
         </button>
       </div>
       <button onClick={handleDeposit} className="btn">Deposit</button>
-      {errorMessage && <div className="error-message">{errorMessage}</div>}
+      
     </div>
   );
 }

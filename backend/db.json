@@ -4,7 +4,7 @@
       "id": 1,
       "accountNumber": "284941940597",
       "pin": "0987",
-      "balance": 799
+      "balance": 16899
     },
     {
       "id": 2,
@@ -307,6 +307,41 @@
       "description": "Debit",
       "amount": -100,
       "id": 42
+    },
+    {
+      "userId": 1,
+      "date": "2024-11-25T17:50:10.250Z",
+      "description": "Debit",
+      "amount": -100,
+      "id": 43
+    },
+    {
+      "userId": 1,
+      "date": "2024-11-25T17:50:31.326Z",
+      "description": "Credit",
+      "amount": 200,
+      "id": 44
+    },
+    {
+      "userId": 1,
+      "date": "2024-11-25T17:51:49.976Z",
+      "description": "Credit",
+      "amount": 20000,
+      "id": 45
+    },
+    {
+      "userId": 1,
+      "date": "2024-11-25T17:52:15.007Z",
+      "description": "Credit",
+      "amount": 1000,
+      "id": 46
+    },
+    {
+      "userId": 1,
+      "date": "2024-11-25T17:53:20.313Z",
+      "description": "Debit",
+      "amount": -5000,
+      "id": 47
     }
   ]
 }

@@ -78,9 +78,15 @@ function Withdraw({ user, setUser }) {
     setAmount((prevAmount) => prevAmount + value);
   };
 
+  const handleClearSingle = () => {
+    setAmount((prevAmount) => prevAmount.slice(0, -1));
+  };
+
   return (
     <div className="transaction">
+      
       <h2>Withdraw Money</h2>
+      {errorMessage && <div className="error-message">{errorMessage}</div>}
       <input
         type="number"
         value={amount}
@@ -100,13 +106,13 @@ function Withdraw({ user, setUser }) {
         ))}
         <button
           className="numpad-button"
-          onClick={() => setAmount('')} /* Clear the input */
+          onClick={handleClearSingle} /* Clear the input */
         >
           Clear
         </button>
       </div>
       <button onClick={handleWithdraw} className="btn">Withdraw</button>
-      {errorMessage && <div className="error-message">{errorMessage}</div>}
+      
     </div>
   );
 }
