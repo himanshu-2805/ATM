@@ -1,7 +1,7 @@
 /* Balance Component Styles */
 .balance-container {
-  width: 100%; /* Set consistent width for layout */
-  max-width: 1000px; /* Matches the layout of transaction pages */
+  width:150 %; /* Set consistent width for layout */
+  max-width: 400px; /* Matches the layout of transaction pages */
   background-color: #ffffff; /* Matches the container background */
   padding: 40px; /* Consistent padding */
   border-radius: 15px; /* Slightly rounded corners for consistency */

@@ -29,16 +29,20 @@ function Header({ onLogout }) {
   return (
     <header className="header-container">
       <div className="header-left">
-        <h1>EXL ATM</h1>
+        <h1 onClick={() => navigate('/account')} className="header-logo" style={{ cursor: 'pointer' }}>
+          EXL ATM
+        </h1>
       </div>
       <div className="header-center">
-        <p>Time Spent: <span className="time-spent">{formatTime(timeElapsed)}</span></p>
+        <p>
+          Time Spent: <span className="time-spent">{formatTime(timeElapsed)}</span>
+        </p>
       </div>
       <div className="header-right">
         <button onClick={handleLogout} className="logout-button">
           Logout
         </button>
-        <DateTime/>
+        <DateTime />
       </div>
     </header>
   );
