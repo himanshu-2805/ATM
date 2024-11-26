@@ -8,7 +8,7 @@ function FastWithdraw({ user, setUser }) {
   const navigate = useNavigate();
   
   // Add more predefined amounts for fast withdrawal
-  const amounts = [5000, 10000, 15000, 20000, 25000, 30000];
+  const amounts = [10000, 15000, 20000, 25000];
 
   const handleFastWithdraw = async (amount) => {
     if (user.balance < amount) {

@@ -18,76 +18,76 @@
       "id": 1,
       "userId": 1,
       "date": "2024-11-20T10:00:00Z",
-      "description": "Deposit",
+      "description": "Credit",
       "amount": 2000
     },
     {
       "id": 2,
       "userId": 1,
       "date": "2024-11-20T12:00:00Z",
-      "description": "Withdrawal",
+      "description": "Debit",
       "amount": -500
     },
     {
       "userId": 1,
       "date": "2024-11-21T05:46:49.408Z",
-      "description": "Deposit",
+      "description": "Credit",
       "amount": 100,
       "id": 3
     },
     {
       "userId": 1,
       "date": "2024-11-21T05:48:18.586Z",
-      "description": "Withdraw",
+      "description": "Debit",
       "amount": 2000,
       "id": 4
     },
     {
       "userId": 1,
       "date": "2024-11-21T08:03:34.446Z",
-      "description": "Withdraw",
+      "description": "Debit",
       "amount": 400,
       "id": 5
     },
     {
       "userId": 1,
       "date": "2024-11-21T08:04:55.157Z",
-      "description": "Withdraw",
+      "description": "Debit",
       "amount": -500,
       "id": 6
     },
     {
       "userId": 1,
       "date": "2024-11-21T08:06:31.635Z",
-      "description": "Withdraw",
+      "description": "Debit",
       "amount": -900,
       "id": 7
     },
     {
       "userId": 1,
       "date": "2024-11-21T08:31:29.324Z",
-      "description": "Withdraw",
+      "description": "Debit",
       "amount": -800,
       "id": 8
     },
     {
       "userId": 1,
       "date": "2024-11-21T08:33:09.238Z",
-      "description": "Withdraw",
+      "description": "Debit",
       "amount": -100,
       "id": 9
     },
     {
       "userId": 1,
       "date": "2024-11-21T13:57:19.604Z",
-      "description": "Deposit",
+      "description": "Credit",
       "amount": 1500,
       "id": 10
     },
     {
       "userId": 1,
       "date": "2024-11-21T13:57:55.663Z",
-      "description": "Withdraw",
+      "description": "Debit",
       "amount": -500,
       "id": 11
     },
@@ -122,7 +122,7 @@
     {
       "userId": 1,
       "date": "2024-11-21T17:44:44.340Z",
-      "description": "Withdraw",
+      "description": "Debit",
       "amount": -100,
       "id": 16
     },
@@ -185,21 +185,21 @@
     {
       "userId": 1,
       "date": "2024-11-22T09:28:34.596Z",
-      "description": "Withdraw",
+      "description": "Debit",
       "amount": -100,
       "id": 25
     },
     {
       "userId": 1,
       "date": "2024-11-22T11:33:06.169Z",
-      "description": "Withdraw",
+      "description": "Debit",
       "amount": -100,
       "id": 26
     },
     {
       "userId": 1,
       "date": "2024-11-22T11:37:03.565Z",
-      "description": "Withdraw",
+      "description": "Debit",
       "amount": -100,
       "id": 27
     },
